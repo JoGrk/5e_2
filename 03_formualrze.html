@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+    
+<head>
+    <script src="./03_formularze.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="change">Jan kowalski</h1>
+    <input type="radio" name="hunt" id="tree">
+    <label for="tree">drzewa</label>
+
+    <input type="radio" name="hunt" id="bush">
+    <label for="bush">krzew</label>
+
+    <input type="radio" name="hunt" id="perennials">
+    <label for="perennials">byliny</label>
+
+    <button id="btn">Wyślij</button>
+    <h3 id="result"></h3>
+
+
+    <form>
+        <label for="e-mail">E-mail:</label>
+        <input type="email" name="e-mail" id="e-mail">
+        <label for="service">Usługa</label>
+
+        <select name="service" id="service">
+            <option value="naprawa komputera">naprawa komputera</option>
+            <option value="odzyskiwanie danych">odzyskiwanie danych</option>
+            <option value="konfiguracja sieci">konfiguracja sieci</option>
+            <option value="Inne">Inne</option>
+        </select>
+
+        <input type="checkbox" name="copy" id="copy">
+        <label for="copy">Wyślij kopię wiadomości</label><br>
+
+        <button style="background-color:Red" type="reset">Resetuj</button>
+        <button id="submit" style="background-color:green">Prześlij</button>
+        
+    </form>
+    <p id="resultF"></p>
+</body>
+</html>
