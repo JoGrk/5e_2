@@ -65,14 +65,33 @@ GROUP BY dzial;
 SELECT * FROM pracownicy
     INNER JOIN dzialy ON pracownicy.dzial=dzialy.kod;
  -- 11. Wyświetl imię i nazwisko każdego pracownika razem z nazwą i budżetem działu, w którym pracownik pracuje. 
+SELECT imie, nazwisko, nazwa, budzet
+FROM pracownicy
+    INNER JOIN Dzialy ON Dzialy.kod=Pracownicy.dzial
 
  -- 12. Wyświetl imiona i nazwiska pracowników, którzy pracują w działach o budżetach większych niż  $60,000 (czyli sześćdziesiąt tysięcy)
-
+SELECT imie,nazwisko ,budzet   
+FROM pracownicy 
+    INNER JOIN dzialy ON pracownicy.dzial=dzialy.kod 
+WHERE budzet > 60000;
 -- 13. Wyświetl działy z budżetem większym niż średni budżet wszystkich działów. 
 
+SELECT nazwa
+FROM dzialy
+WHERE budzet>(SELECT AVG(budzet) FROM dzialy);
  -- 14. Wyświetl nazwy działów z więcej niż dwoma pracownikami 
+ SELECT nazwa
+ FROM pracownicy
+    INNER JOIN dzialy ON pracownicy.dzial=dzialy.kod
+ GROUP BY dzial
+ HAVING count(*)>2;
 
 -- 15. Wyświetl imiona i nazwiska pracowników, pracujących w działach (dziale) z najmniejszym budżetem.
+
+SELECT imie, nazwisko 
+FROM pracownicy
+    INNER JOIN dzialy on pracownicy.dzial=dzialy.kod
+WHERE budzet = (SELECT MIN(budzet) FROM dzialy);
 
 -- 16. Dodaj nowy dział  "Quality Assurance" z budżetem $40,000 i kodem 10. 
 
