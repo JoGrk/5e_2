@@ -94,15 +94,48 @@ FROM pracownicy
 WHERE budzet = (SELECT MIN(budzet) FROM dzialy);
 
 -- 16. Dodaj nowy dział  "Quality Assurance" z budżetem $40,000 i kodem 10. 
-
+INSERT INTO dzialy(kod,nazwa,budzet) 
+VALUES(10,"Quality Assurance",40000);
 -- 17. Dodaj pracownika "Mary Moore", pracującą w dziale o kodzie 10, z ID 847-21-9811.
-
+INSERT INTO Pracownicy(imie,nazwisko,dzial)
+VALUES("Mary", "Moore",10);
 -- 18. Zmniejsz budżet wszystkich działów o 10%.
-
+UPDATE dzialy
+SET budzet=budzet*0.9;
 -- 19. przenieś pracowników z działu Research  do działu IT  .
+
+UPDATE pracownicy
+SET dzial = 14
+WHERE dzial = 77;
+
+UPDATE pracownicy
+SET dzial=(SELECT kod 
+    from dzialy 
+    WHERE nazwa='IT')
+WHERE dzial=(SELECT kod 
+    FROM dzialy
+        WHERE nazwa='Research');
 
 -- 20. Usuń wszystkich pracowników pracujących w dziale   IT.
 
+DELETE FROM Pracownicy
+WHERE dzial =(SELECT kod
+    FROM dzialy
+    WHERE nazwa = 'IT');
+
+
+SELECT kod
+FROM dzialy
+WHERE nazwa = 'IT';
 -- 21. Usuń wszystkich pracowników, którzy pracują w działach z budżetem większym bądź równym $60,000 (60 tysięcy)
+SELECT kod
+FROM Dzialy
+WHERE budzet >=60000;
+
+DELETE FROM pracownicy
+WHERE dzial IN (SELECT kod
+    FROM Dzialy
+    WHERE budzet >=60000);
 
 -- 22. Usuń wszystkich pracowników
+TRUNCATE pracownicy;

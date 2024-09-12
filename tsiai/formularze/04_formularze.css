@@ -1,0 +1,15 @@
+.light{
+    color: blueviolet;
+    background-color: bisque;
+    font-size: 28px;
+}
+.dark{
+    color: rgb(7, 25, 9);
+    background-color: rgb(222, 207, 188);
+    font-size: 14px;
+}
+.autumn{
+    color: rgb(174, 202, 58);
+    background-color: rgb(210, 78, 41);
+    font-size: 45px;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="04_formularze.js" defer></script>
+    <link rel="stylesheet" href="./04_formularze.css">
+</head>
+<body>
+    <!-- 1 -->
+    <p id="lorem">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, labore esse? Illum debitis, provident ea maxime eum ullam laudantium, natus aut harum voluptate temporibus. Laudantium quam exercitationem officia perferendis rerum!</p>
+    <!-- 2 -->
+    <label for="size">Podaj wielkosc czcionki</label>
+    <input type="number" name="size" id="size" min="8" max="160" step="8" value="16"> <br>
+    <!-- 3 -->
+    <input type="checkbox" name="italic" id="italic">
+    <label for="italic">Czy tekst pochylony</label><br>
+    <!-- 4 -->
+    <input type="radio" name="color" id="clear" checked>
+    <label for="clear">brak</label>
+    <input type="radio" name="color" id="blue">
+    <label for="blue">Niebieski</label>
+    <input type="radio" name="color" id="red">
+    <label for="red">Czerwony</label>
+    <input type="radio" name="color" id="yellow">
+    <label for="yellow">Żółty</label>
+
+    <select name="class" id="class">
+        <option value="light">jasny</option>
+        <option value="dark">ciemny</option>
+        <option value="autumn">jesien</option>
+    </select>
+
+
+    <br><button id="btn">Wyslij</button>
+    <br><button id="btnc">zmiana motywu</button>
+</body>
+</html>
