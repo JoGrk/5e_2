@@ -139,3 +139,22 @@ WHERE dzial IN (SELECT kod
 
 -- 22. Usuń wszystkich pracowników
 TRUNCATE pracownicy;
+
+
+
+
+-- Wyświetl kody działów zatrudniających co najmniej dwóch pracowników
+
+SELECT dzial, count(*)
+FROM pracownicy
+GROUP BY dzial
+HAVING count(*) >= 2
+
+
+
+-- Wyświetl dane wszystkich pracowników, którzy pracują w dziale 37, 77 oraz 18
+
+SELECT imie, nazwisko
+FROM pracownicy 
+    INNER JOIN dzialy ON pracownicy.dzial=dzialy.kod
+WHERE dzial IN (37,77,18)
