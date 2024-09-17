@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="05_formularze.css">
     <script src="05_formularze.js" defer></script>
 </head>
+
 <body>
     <input type="radio" name="card" id="gold">
     <label for="gold">Złota karta</label>
@@ -18,5 +21,24 @@
     <button id="btn">Wyślij</button>
     <p id="result"></p>
     <h1>jaka pogoda</h1>
+
+
+    <label for="size">Podaj rozmiar tekstu w procentach:</label>
+    <input type="number" name="size" id="size"> %
+    
+    <select name="list" id="list">
+        <option value="normal">prosty</option>
+        <option value="italic">pochylony</option>
+    </select>
+    <p>Jakim kolorem sformatować tekst? Wybierz przycisk</p>
+    <button id="red" class="btnsize red"></button>
+    <button id="green" class="btnsize green"></button>
+    <button id="blue" class="btnsize blue"></button>
+<p id="paragraf">
+        To jest
+        przykład paragrafu, który może być dowolnie formatowany przez Java
+        Script."
+    </p>
 </body>
+
 </html>

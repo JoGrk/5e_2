@@ -27,3 +27,32 @@ btnE.addEventListener('click', (e)=>{
  })
 
 
+const paragrafE=document.getElementById('paragraf')
+ const sizeE=document.getElementById('size')
+
+ sizeE.addEventListener('change',(e)=>{
+    paragrafE.style.fontSize=sizeE.value + "%"
+ })
+
+
+const listE=document.querySelector('#list')
+const redE=document.getElementById('red')
+const greenE=document.getElementById('green')
+const blueE=document.getElementById('blue')
+
+ listE.addEventListener('change',(e)=>{
+    paragrafE.style.fontStyle=listE.value
+ })
+
+redE.addEventListener('click',(e)=>{
+    paragrafE.style.color='red'
+})
+greenE.addEventListener('click',(e)=>{
+    paragrafE.style.color='green'
+})
+blueE.addEventListener('click',(e)=>{
+    paragrafE.style.color='blue'
+})
+ 
+
+ 
