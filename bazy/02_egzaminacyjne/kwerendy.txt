@@ -1,0 +1,2 @@
+1. insert into filmy (tytul,rok,ocena,gatunki_id)
+values("suburbicon",2017,5,5);

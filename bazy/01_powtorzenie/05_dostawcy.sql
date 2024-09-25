@@ -125,5 +125,17 @@ WHERE Produkt = (
 );
 
 -- 10. Usuń z bazy dostawcę o kodzie "RBT"
+DELETE FROM Oferty 
+WHERE dostawca = 'RBT';
+
+DELETE FROM dostawcy 
+WHERE kod = 'RBT';
 
 -- 11. Usuwamy z oferty (tabela Oferty) nakrętki (nut). Właściwy kod produktu wyszukaj podzapytaniem.
+DELETE FROM Oferty
+WHERE produkt =(
+    SELECT kod
+    FROM Produkty
+    WHERE nazwa = "nut"
+) 
+;
