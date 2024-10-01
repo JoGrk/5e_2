@@ -1,3 +1,6 @@
+*{
+    margin: 0;
+}
 main{
     display: flex;
 }
@@ -34,4 +37,6 @@ aside div:last-child{
 footer{
     height: 10vh;
     background-color: lightseagreen;
+    
 }
+
