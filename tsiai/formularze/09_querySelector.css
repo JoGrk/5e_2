@@ -1,0 +1,37 @@
+main{
+    display: flex;
+}
+header{
+    height: 10vh;
+    background-color: lightpink;
+}
+nav{
+    width: 40%;
+}
+nav div:first-child{
+    height: 27vh;
+    background-color: darkgrey;
+}
+nav div:first-child + div{
+    height: 27vh;
+    background-color: cadetblue;
+}
+nav div:last-child{
+    height: 26vh;
+    background-color: cornflowerblue;
+}
+aside{
+    width: 60%;
+}
+aside div:first-child{
+    height: 40vh;
+    background-color: darkcyan;
+}
+aside div:last-child{
+    height: 40vh;
+    background-color: rgb(207, 191, 191);
+}
+footer{
+    height: 10vh;
+    background-color: lightseagreen;
+}
