@@ -1,0 +1,50 @@
+
+body{
+ font-family:Georgia;
+
+}
+main{
+    display: flex;
+}
+.left{
+    background-color: maroon;
+    color: white;
+    height: 600px;
+    width: 30%;
+}
+.right{
+    background-color: maroon;
+    color: white;
+    height: 600px;
+    width: 70%;
+    overflow: auto;
+}
+footer{
+    background-color: dimgray;
+    color: white;
+}
+.right img{
+    float: left;
+}
+.right ul{
+    float: left;
+}
+.right p{
+    clear: both;
+}
+p{
+    padding: 10px;
+}
+img{
+    padding: 10px;
+    border: 1px solid white;
+}
+#indigo{
+    background-color: indigo;
+}
+#steelblue{
+    background-color: steelblue;
+}
+#olive{
+    background-color: olive;
+}
