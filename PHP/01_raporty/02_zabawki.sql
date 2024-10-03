@@ -1,0 +1,3 @@
+SELECT adres_sklepu, AVG(cena) FROM sklep_informacje JOIN sklep_magazyn ON sklep_informacje.id_sklepu = sklep_magazyn.id_sklepu JOIN zabawka_informacje ON sklep_magazyn.id_zabawki = zabawka_informacje.id_zabawki GROUP BY sklep_informacje.id_sklepu;
+
+SELECT adres_sklepu, stan_magazynu, zabawka FROM sklep_informacje JOIN sklep_magazyn ON sklep_informacje.id_sklepu = sklep_magazyn.id_sklepu JOIN zabawka_informacje ON sklep_magazyn.id_zabawki = zabawka_informacje.id_zabawki;   
