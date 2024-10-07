@@ -1,0 +1,42 @@
+*{
+    font-family: 'Verdana';
+}
+header{
+    display: flex;
+}
+#left, #right{
+    background-color: #6F79A8;
+    color: white;
+    height: 140px;
+}
+#left{
+    width: 30%;
+}
+#right{
+    width: 70%;
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+}
+.calendar{
+    background-color: #9FA8DA;
+    width: 160px;
+    height: 85px;
+    margin: 5px;
+    border: 1px solid #6F79A8;
+    overflow: hidden;
+}
+.calendar:hover{
+    background-color: #6F79A8;
+    color: white
+}
+footer{
+    background-color: #6F79A8;
+    color: white;
+    padding: 5px;
+    text-align: right;
+}
+h6{
+    text-align: center;
+}
