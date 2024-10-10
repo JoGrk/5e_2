@@ -1,0 +1,16 @@
+body{
+   display: flex; 
+}
+.left{
+    width: 30%;
+    background-color: aqua;
+    height: 100vh;
+    padding: 2rem;
+
+}
+.right{
+    width: 70%;
+    background-color: aquamarine;
+    height: 100vh;
+    padding: 2rem;
+}
