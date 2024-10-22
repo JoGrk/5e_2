@@ -1,0 +1,48 @@
+*{
+    font-family: Garamond;
+    margin: 0;
+}
+header{
+    background-color: tomato;
+    text-align: center;
+    color: white;
+    height: 80px;
+}
+main{
+    height: 600px;
+    
+}
+aside{
+    background-color: coral;
+    width: 20%;
+    height: 680px;
+}
+footer{
+    background-color: tomato;
+    color: white;
+    text-align: center;
+}
+
+img{
+    
+    margin-left: 10px;
+
+}
+div{
+    display: flex;
+}
+.chat{
+    border: 1px solid tomato;   
+    margin: 15px;
+    height: 470px;
+    overflow:scroll
+}
+.jola, .krzysiek{
+
+    margin: 2%;
+    padding: 3px;
+}
+section{
+    width: 80%;
+
+}
