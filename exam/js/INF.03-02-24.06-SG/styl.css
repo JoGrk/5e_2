@@ -1,26 +1,36 @@
 *{
-    font-family: Garamond;
-    margin: 0;
+    font-family: Garamond; 
 }
+body {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-areas: 
+            'header aside'
+            'main   aside'
+            'footer footer';
+}
+
 header{
     background-color: tomato;
     text-align: center;
     color: white;
     height: 80px;
+    grid-area: header;
 }
 main{
     height: 600px;
-    
+    grid-area: main;
 }
 aside{
     background-color: coral;
-    width: 20%;
     height: 680px;
+    grid-area: aside;
 }
 footer{
     background-color: tomato;
     color: white;
     text-align: center;
+    grid-area: footer;
 }
 
 img{
