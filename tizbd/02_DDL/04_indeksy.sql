@@ -76,19 +76,29 @@ ALTER TABLE clients
 DROP constraint u_zip;
  
 -- 15. usuń domyślną wartość dla city
- 
+ ALTER TABLE clients
+ ALTER city DROP DEFAULT;
 -- 16. Zmień nazwę pola cust_id na client_id.
- 
+ ALTER TABLE clients
+ CHANGE cust_id client_id int;
 -- 17. Czy mamy jakieś indeksy w tabeli? 
- 
+ SHOW index FROM clients;
 -- 18. Dodaj index na polu city
- 
+CREATE INDEX idx_city ON clients(city);
 -- 19. Dodaj unikatowy index na polu name
  
+CREATE UNIQUE index idx_name ON clients(name); 
+
 -- 20. Utwórz index na polach address1 i address2
- 
+
+CREATE INDEX idx_addres ON clients(address1,address2);
+
+
 -- 21. Zmień nazwę tabeli clients na client_addresses
- 
+RENAME TABLE clients TO client_addresses; 
 -- 22. Usuń index z pól address1 i address2
- 
+ALTER TABLE client_addresses
+DROP INDEX idx_addres;
 -- 23. Przenieś tabelę client_addresses do dowolnej innej bazy danych
+ALTER TABLE client_addresses
+RENAME TO 5e_2_kopia.client_addresses;
