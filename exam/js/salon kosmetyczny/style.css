@@ -1,0 +1,39 @@
+body {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-areas: 
+         'lt   rt'
+         'lt   rb'
+         'lb   rb'
+         'ft   ft'   
+    ;
+}
+
+.left-top {
+    grid-area: lt;
+    height: 500px;
+    background-color: aquamarine;
+}
+
+.left-bottom{
+    grid-area: lb;
+    height: 300px;
+    background-color: blueviolet;
+}
+
+.right-top {
+    grid-area: rt;
+    height: 150px;
+    background-color: cadetblue;
+}
+
+.right-bottom {
+    grid-area: rb;
+    height: 650px;
+    background-color: chartreuse;
+}
+footer{
+    height: 100px;
+    background-color: cornflowerblue;
+    grid-area: ft;
+}
