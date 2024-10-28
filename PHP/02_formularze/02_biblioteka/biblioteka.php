@@ -1,17 +1,18 @@
 <?php
     $conn = new mysqli('localhost','root','','5e_2_biblioteka');
+    
+    $readers = [];
 
     if(!empty($_POST['firstname']) && !empty($_POST['surname'])){
         $firstname = $_POST['firstname'];
         $surname = $_POST['surname'];
 
-        $sql = "select tytul 
-from ksiazki 
-inner join wypozyczenia
- on ksiazki.id = wypozyczenia.id_ksiazka
-inner join czytelnicy
- on wypozyczenia.id_czytelnik = czytelnicy.id
-where imie = '$firstname' and nazwisko = '$surname';";
+        $sql = "select tytul  from ksiazki 
+                inner join wypozyczenia
+                 on ksiazki.id = wypozyczenia.id_ksiazka
+                inner join czytelnicy
+                on wypozyczenia.id_czytelnik = czytelnicy.id
+                where imie = '$firstname' and nazwisko = '$surname';";
 
         $result = $conn -> query($sql);
         $readers = $result -> fetch_all(1);

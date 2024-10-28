@@ -7,3 +7,5 @@ inner join wypozyczenia
 inner join czytelnicy
  on wypozyczenia.id_czytelnik = czytelnicy.id
 where imie = 'Adam' and nazwisko = 'Milek';
+
+-------------------
