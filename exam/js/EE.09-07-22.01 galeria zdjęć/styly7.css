@@ -1,0 +1,13 @@
+body {
+    grid-template-columns: 80% 20%;
+
+    grid-template-areas: 'header header'
+                          'main main'
+                          'left right'
+                          'footer footer'  ;
+    font-family: Helvetica;
+}
+
+header{
+    grid-area: header;
+}

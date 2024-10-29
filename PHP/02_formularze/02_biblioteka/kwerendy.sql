@@ -9,3 +9,24 @@ inner join czytelnicy
 where imie = 'Adam' and nazwisko = 'Milek';
 
 -------------------
+
+-- wyświetli id i nazwa wydawnictwa z tabeli wydawnictwa
+SELECT id, nazwa
+FROM wydawnictwa;
+
+-- wyświetli tytuły książek wydawnictwa o id 1
+SELECT tytul
+FROM ksiazki
+WHERE ID_wydawnictwo = 1;
+
+
+--imei i nazwisko autoa id 
+
+select id, imie ,nazwisko 
+FROM autorzy;
+
+
+SELECT imie,nazwisko , tytul 
+FROM autorzy 
+INNER JOIN ksiazki ON autorzy.id=ksiazki.id_autor
+WHERE id_autor=1 ;
