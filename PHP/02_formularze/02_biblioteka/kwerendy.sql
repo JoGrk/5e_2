@@ -30,3 +30,6 @@ SELECT imie,nazwisko , tytul
 FROM autorzy 
 INNER JOIN ksiazki ON autorzy.id=ksiazki.id_autor
 WHERE id_autor=1 ;
+
+DELETE FROM ksiazki
+WHERE tytul="Poezje";

@@ -24,7 +24,28 @@ $authors=$result->fetch_all(1);
                 }
             ?>
         </select>
+        <button>Wyślij</button>
     </form>
+    <?php
+
+       if (!empty($_POST['authorlist'])){
+        $id = $_POST['authorlist'];
+        $sql="SELECT tytul, imie, nazwisko FROM ksiazki 
+                JOIN autorzy ON ksiazki.id_autor = autorzy.id  
+                WHERE id_autor = $id;";
+        $result = $link->query($sql);
+        $books = $result->fetch_all(1);
+        echo "<table border='1'>";
+        foreach($books as $book){
+            echo "<tr>";
+            echo "<td> {$book['imie']} </td>";
+            echo "<td> {$book['nazwisko']} </td>";
+            echo "<td> {$book['tytul']} </td>";
+            echo "</tr>";
+        }
+        echo "</table>";
+       }
+    ?>
 </body>
 </html>
 <?php 
