@@ -10,4 +10,17 @@ body {
 
 header{
     grid-area: header;
+    
+}
+footer{
+    grid-area: footer;
+}
+main{
+    grid-area: main;
+}
+.left{
+    grid-area: left;
+}
+.right{
+    grid-area: right;
 }
