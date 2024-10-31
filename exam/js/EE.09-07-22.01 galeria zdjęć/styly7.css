@@ -1,3 +1,7 @@
+/* *{
+    margin: 0px;
+} */
+
 body {
     grid-template-columns: 80% 20%;
 
@@ -10,17 +14,43 @@ body {
 
 header{
     grid-area: header;
-    
 }
 footer{
     grid-area: footer;
 }
-main{
-    grid-area: main;
-}
+
 .left{
     grid-area: left;
+    background-color: rgb(70, 130, 180);
+    color: white;
+    height: 300px;
 }
 .right{
     grid-area: right;
+    background-color: rgb(70, 130, 180);
+    color: white;
+    height: 300px;
+}
+header, footer{
+    background-color: rgb(70, 130, 180);
+    color: white;
+    height: 30px;
+    text-align: center;
+}
+main{
+    background-color: rgb(176, 196, 22);
+    padding: 50px;
+    text-align: center;
+    grid-area: main;
+}
+main img{
+    padding: 3px;
+    border: 1px blue dashed;
+    border-radius: 10px;
+}
+.left img{
+    height: 40%;
+}
+.left img:hover{
+    border: 1px white solid;
 }
