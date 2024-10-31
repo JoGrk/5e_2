@@ -1,0 +1,31 @@
+main{
+    display: grid;
+    grid-template-columns: 33% 34% 33%;
+    grid-template-rows: 30vh 30vh 30vh;
+    grid-template-areas: 'left top top'
+                         'left mid right'
+                         'down down right';
+}
+.left{
+    background-color: aqua;
+    grid-area: left;
+}
+.top{
+    background-color: black;
+    grid-area: top;
+}
+.right{
+    background-color: blueviolet;
+    grid-area: right;
+}
+.down{
+    background-color: purple;
+    grid-area: down;
+}
+.mid{
+    background-color: chocolate;
+    grid-area: mid;
+}
+footer{
+    background-color: rgb(220, 20, 220);
+}
