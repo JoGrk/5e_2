@@ -1,0 +1,41 @@
+header{
+    color: white;
+    text-align: center;
+    height: 370px;
+}
+main{
+    background-color: whitesmoke;
+    height: 50px;
+}
+.left{
+    background-color: whitesmoke;
+    width: 70%;
+    height: 230px;
+}
+.right{
+    background-color: whitesmoke;
+    width: 30%;
+    height: 230px;
+    text-align: right;
+}
+body{
+    font-family: Tahoma;
+    background-color: crimson;
+}
+.block{
+    color: white;
+    text-align: center;
+    width: 200px;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+
+}
+h2{
+    text-align: center;
+    letter-spacing: 7px;
+    text-transform: capitalize;
+}
+footer{
+    display: flex;
+}
