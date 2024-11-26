@@ -29,7 +29,7 @@ table,td{
     border-collapse: collapse;
 }
 table{
-    padding: auto;
+    margin: auto;
     width: 95%;
 }
 td,th{
