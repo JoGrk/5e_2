@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rejestracja</title>
+    <link rel="stylesheet" href="styl.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Formularz rejestracyjny konferencji <em>Nasze Kwiaty</em></h1>
+    </header>
+
+    <main>
+        <form>
+        <section id="blok1">
+            <h2>Dane osobowe</h2>
+            <input type="text" name="firstName" id="firstName" placeholder="Wpisz imię..." required>
+            <input type="text" name="surName" id="surName" placeholder="Wpisz nazwisko..." required>
+            <button id="btn">Następna karta</button>
+        </section>
+        <section id="blok2">
+            <h2>Dane kontaktowe</h2>
+            <input type="email" name="e-mail" id="e-mail" placeholder="Twój e-mail...">
+            <input type="tel" name="phone" id="phone" placeholder="Twój numer telefonu...">
+            <button id="btn2">Następna karta</button>
+        </section>
+        <section id="blok3">
+            <h2>Hasło do logowanie</h2>
+            <input type="password" name="pass" id="pass" placeholder="Podaj hasło...">
+            <input type="password" name="pass2" id="pass2" placeholder="Powtórz hasło...">
+            <button id="zat">Zatwierdź</button>
+        </section>
+    </form>
+    </main>
+
+    <footer>
+        <section id="foot1">
+           <video controls src="motyl.mp4">Przeglądarka nie obsuługje tego formatu</video>
+        </section>
+        <section id="foot2">
+            <h3>Plan konferencji</h3>
+            <table>
+                <tr>
+                    <td>9:00 - 12:00</td>
+                    <td>Pielęgnacja roślin</td>
+                </tr>
+                <tr>
+                    <td>13:00 - 15:00</td>
+                    <td>Targi kwiatowe</td>
+                </tr>
+            </table>
+        </section>
+        <section id="foot3">
+            <p><a href=" https://kwiaty.pl/">Internetowa kwiaciarnia</a></p>
+        </section>
+        <section id="foot4">
+            <p>Formularz wykonał: Nie interere bo kicikici</p>
+        </section>
+    </footer>
+</body>
+</html>
