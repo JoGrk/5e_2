@@ -1,0 +1,17 @@
+-- ‒ Zapytanie 1: wybierające jedynie pola czas, kierunek, nr_rejsu i status_lotu z tabeli przyloty posortowane rosnąco według czasu
+SELECT czas, kierunek, nr_rejsu, status_lotu
+FROM przyloty
+ORDER BY czas;
+-- ‒ Zapytanie 2: zliczające przyloty, które odbyły się w godzinach 10:00 ÷ 10:59
+SELECT COUNT(*) as Przyloty
+FROM przyloty
+WHERE czas BETWEEN '10:00' AND '10:59';
+-- ‒ Zapytanie 3: wybierające jedynie pola nr_rejsu z tabeli przyloty oraz typ z tabeli samoloty dla lotów, których kierunkiem jest Warszawa; zapytanie wykorzystuje relację
+SELECT nr_rejsu, samoloty.typ
+FROM przyloty
+    INNER JOIN samoloty ON przyloty.samoloty_id = samoloty.id
+WHERE kierunek = "Warszawa";
+-- ‒ Zapytanie 4: aktualizujące w tabeli odloty pole status_lotu na: „opoznienie 20 min” dla lotu o numerze rejsu LX5673
+UPDATE odloty
+SET status_lotu = 'opoznienie 20 mi'
+WHERE nr_rejsu = 'LX5673';
