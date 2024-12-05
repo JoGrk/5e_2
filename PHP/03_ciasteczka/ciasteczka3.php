@@ -19,7 +19,7 @@
         }
         else if(!isset($_COOKIE['login']) && !empty($_POST['login'])){
             $login=$_POST['login'];
-            setcookie('login', $login, time()+2);
+            setcookie('login', $login, time()+20);
             echo "Witaj użytkowniku <b>$login</b>";
         }
         if(isset($_COOKIE['login'])){

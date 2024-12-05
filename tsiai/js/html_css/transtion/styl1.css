@@ -1,0 +1,20 @@
+.name{
+    width: 10rem;
+    height: 10rem;
+    background-color: blue;
+    transition: width 2s, 
+                background-color 2s  linear 1s ;
+}
+
+.name:hover{
+    background-color: green;
+    width: 30rem;
+    
+}
+.obraz{
+    transition: 2s;
+}
+.obraz:hover{
+    opacity: 0;
+    transform: scale(1.2);
+}
